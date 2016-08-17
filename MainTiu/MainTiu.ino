@@ -78,10 +78,7 @@ void loop()
     doBump();
     delay(10);
     sendCon();
-    if(bump == 'B')
-       digitalWrite(RING,HIGH);
-    else
-       digitalWrite(RING,LOW);
+    doRing();
 }
 
 
@@ -205,6 +202,14 @@ void sendCon()
     
 }
 
+void doRing()
+{
+    if(bump == 'B')
+       digitalWrite(RING,HIGH);
+    else
+       digitalWrite(RING,LOW);
+}
+
 //////////////////////功能性//////////////////////////
 /*
 float mapfloat(float x, float in_min, float in_max, float out_min, float out_max)
@@ -233,4 +238,3 @@ void doWrite()
     scrSerial.write(0XFF);
     scrSerial.write(0XFF);
 }
-
