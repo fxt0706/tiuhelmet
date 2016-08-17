@@ -1,2 +1,2 @@
 # tiuhelmet
-A Helment get environment data based on Arduino 101
+A Helment get surronding's data based on Arduino board
